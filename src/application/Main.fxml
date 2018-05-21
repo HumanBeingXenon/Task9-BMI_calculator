@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="600" maxWidth="900" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <center>
+      <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="348.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="RIGHT" text="您的身高（cm）：">
+               <font>
+                  <Font name="Microsoft YaHei" size="18.0" />
+               </font>
+               <graphic>
+                  <TextField fx:id="txfHeight" prefWidth="170.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font></TextField>
+               </graphic>
+            </Label>
+            <Label contentDisplay="RIGHT" text="您的体重（kg）：">
+               <graphic>
+                  <TextField fx:id="txfWeight" prefWidth="170.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font></TextField>
+               </graphic>
+               <font>
+                  <Font name="Microsoft YaHei" size="18.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="RIGHT" text="您的BMI           ：">
+               <graphic>
+                  <TextField fx:id="txfBMI" editable="false" prefWidth="170.0">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </TextField>
+               </graphic>
+               <font>
+                  <Font name="Microsoft YaHei" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#showBMI" text="确认" textAlignment="CENTER">
+               <font>
+                  <Font name="Microsoft YaHei" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem fx:id="mniBMI" mnemonicParsing="false" onAction="#AboutBMI" text="关于BMI" />
+                  <MenuItem fx:id="mniAbout" mnemonicParsing="false" onAction="#AboutAuthor" text="关于本程序" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
